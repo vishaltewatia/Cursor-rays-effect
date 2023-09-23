@@ -1,0 +1,51 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    /* Black background */
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #f39c12;
+    /* Neon color (e.g., orange) */
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.rays {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ray {
+    width: 2px;
+    height: 100%;
+    background-color: #f39c12;
+    /* Neon color */
+    position: absolute;
+    transform-origin: left center;
+    animation: rayAnimation 1s forwards;
+}
+
+@keyframes rayAnimation {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
